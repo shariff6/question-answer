@@ -1,0 +1,23 @@
+{{#if addNewQuestion}}
+  <h1>Question</h1>
+  <div>
+    <form>
+      <div class="form-group name">
+        <label for="Name">Your Name</label> {{input value=name id="name" class="form-control"}}
+      </div>
+      <div class="form-group">
+        <h4>Write Your question</h4>
+        <label for="Question"></label> {{textarea rows="5" cols="80" value=question id="question" class = "form-inline"}}
+      </div>
+      <div class="form-group">
+        <h4>Additional Notes</h4>
+        <label for="additionalnotes"></label>
+        {{textarea rows="5" cols="80" value=additionalnotes id="additionalnotes" class = "form-inline"}}
+      </div>
+      <button {{action 'saveQuestion1'}} class="btn-btn-info">Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'questionFormShow'}}  class="btn btn-info">Submit Question</button>
+{{/if}}
+{{yield}}

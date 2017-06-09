@@ -1,0 +1,9 @@
+{{outlet}}
+<div class="row question">
+{{new-question saveQuestion2="saveQuestion3"}}
+</div>
+<ul>
+  {{#each model.questions as |question|}}
+    {{question-tile question=question}}
+  {{/each}}
+</ul>
