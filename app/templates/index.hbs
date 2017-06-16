@@ -2,8 +2,9 @@
 <div class="row question">
 {{new-question saveQuestion2="saveQuestion3"}}
 </div>
-<ul>
+<div class = "answers">
   {{#each model.questions as |question|}}
     {{question-tile question=question}}
+    <hr>
   {{/each}}
-</ul>
+</div>
